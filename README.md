@@ -13,7 +13,7 @@ A sample ionic/cordova application showing a bug in the cordova implementation o
 
 ## Build
 
-* Add `http://localhost/*` to the "Valid Redirect URIs" of your keycloak client 
+* Add `http://localhost/*` to the "Valid Redirect URIs" of your keycloak server 
 * In `src/app/app-init.ts` change the keycloak config according to your own server configuration (url should be in the form `<protocol>://<host>/auth`)
 
 /!\ You need a distant keycloak server so it works on remote devices (you can't use a local hosted keycloak server to test this as it will not be accessible to android or ios device)
