@@ -8,7 +8,14 @@
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+      <ng-container *ngIf="authenticated; else notLoggedIn">
+          <h2>Connected !</h2>
+          <ion-button color="danger" expand="block" fill="outline" (click)="logout()">Log out</ion-button>
+      </ng-container>
+      <ng-template #notLoggedIn>
+          <h2>Not connected</h2>
+          <ion-button color="primary" expand="full" (click)="login()">Log in</ion-button>
+          <ion-button color="primary" expand="block" fill="outline" (click)="register()">Create account</ion-button>
+      </ng-template>
   </div>
 </ion-content>

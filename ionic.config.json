@@ -1,5 +1,7 @@
 {
   "name": "keycloak-ionic-example",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
